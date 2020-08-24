@@ -639,7 +639,7 @@ namespace Silent_Scanner
         {
             _client = new DiscordSocketClient();
 
-            var token = "NzIwMzI0OTU4MjE5NDAzMzQ0.XuEVGQ.EQnZIR5FkDyIDJsO9q0sHAgDEoI";
+            var token = "0"; // Discord bot token
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
 
