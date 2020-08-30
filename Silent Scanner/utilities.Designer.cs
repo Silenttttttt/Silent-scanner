@@ -49,7 +49,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -328,19 +328,20 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // button2
+            // label10
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(60)))));
-            this.button2.Location = new System.Drawing.Point(-7, -9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(819, 45);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseDown);
-            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseMove);
-            this.button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseUp);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(798, 24);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Silent scanner ";
+            this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseDown);
+            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseMove);
+            this.label10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseUp);
             // 
             // utilities
             // 
@@ -369,7 +370,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label10);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -403,6 +404,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label10;
     }
 }

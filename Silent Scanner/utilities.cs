@@ -45,6 +45,11 @@ namespace Silent_Scanner
         public utilities()
         {
             InitializeComponent();
+            try
+            {
+                label10.Text = "Silent scanner " + File.ReadAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\version");
+            }
+            catch { }
         }
 
         private void button1_Click(object sender, EventArgs e)
