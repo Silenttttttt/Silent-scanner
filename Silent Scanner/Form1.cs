@@ -61,20 +61,11 @@ namespace Silent_Scanner
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private bool dragging = false;
-<<<<<<< HEAD
-=======
-        public static bool explorersearched = false;
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
         private List<FileInfo> files;
         private string[,] finalresults = new string[10, 10000];
         //  List<int> listainte = new List<int>();
         //   List<IntPtr> listeeea = new List<IntPtr>();
         private string ipaddress;
-<<<<<<< HEAD
-=======
-
-        public static bool javawsearched = false;
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
         private string laineee;
 
         // Process currentprocess;
@@ -163,29 +154,7 @@ namespace Silent_Scanner
             List<string> possiblecheatslauncherlist = new List<string>();
             int counter = 0;
             StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\launcher_profiles.json");
-<<<<<<< HEAD
 
-=======
-            string[] explorerstrings;
-            try
-            {
-                explorerstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings").Replace("\r", "").Split('\n');
-                File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", string.Join("\r\n", explorerstrings));
-                //  StreamWriter fileeee = new StreamWriter(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", true);
-                //    for (int iwannagillmaself = 0; iwannagillmaself < explorerstrings.Length; iwannagillmaself++)
-                //    {
-                //        fileeee.Write(explorerstrings[iwannagillmaself]);
-                //  }
-                //fileeee.Close();
-            }
-            catch
-            {
-                StreamReader fileeee = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer");
-                explorerstrings = fileeee.ReadToEnd().Replace("\n", "").Split('\r');
-                fileeee.Close();
-            }
-            //Searcher.Searchboi("explorer", "");
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
             while ((ln = file.ReadLine()) != null)
             {
                 ln = ln.Replace(",", "");
@@ -207,12 +176,6 @@ namespace Silent_Scanner
                     if (ln.Contains(explorerstrings[currentstringexplorer].Replace("\r\n", "")))
                     {
                         possiblecheatslauncherlist.Add(" Possible cheat on launcher: " + ln + " ");
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                     }
                 }
                 counter++;
@@ -468,23 +431,7 @@ namespace Silent_Scanner
         public void GetFilesFromDirectory(string directory, List<FileInfo> files, string[] results)
         {
             // finishedsearch = false;
-<<<<<<< HEAD
 
-=======
-            string[] explorerstrings;
-            try
-            {
-                explorerstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings").Replace("\r", "").Split('\n');
-                File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", string.Join("\r\n", explorerstrings));
-
-            }
-            catch
-            {
-                StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer");
-                explorerstrings = file.ReadToEnd().Split('\r');
-                file.Close();
-            }
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
             var di = new DirectoryInfo(directory);
             var fs = di.EnumerateFiles("*.*", SearchOption.TopDirectoryOnly);
 
@@ -498,15 +445,8 @@ namespace Silent_Scanner
                     if (ln.Contains(explorerstrings[currentstringexplorer].Replace("\r\n", "")))
                     {
                         list.Add(files[i].FullName);
-<<<<<<< HEAD
                         results = list.ToArray();
                     }
-=======
-
-                    }
-
-                    results = list.ToArray();
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                 }
             }
             var directories = di.GetDirectories();
@@ -558,7 +498,6 @@ namespace Silent_Scanner
                 int allstuff = 0;
                 for (int i = 0; results.Length > i; i++)
                 {
-<<<<<<< HEAD
                     if (results[i].Contains("javawstrings$"))
                     {
                         results[i] = results[i].Replace("javawstrings$", "");
@@ -568,17 +507,6 @@ namespace Silent_Scanner
                     else if (results[i].Contains("explorerstrings$"))
                     {
                         results[i] = results[i].Replace("explorerstrings$", "");
-=======
-                    if (results[i].Contains("javawstrings"))
-                    {
-                        results[i] = results[i].Replace("javawstrings", "");
-                        finalresults[0, allstuff] = results[i];
-                        allstuff++;
-                    }
-                    else if (results[i].Contains("explorerstrings"))
-                    {
-                        results[i] = results[i].Replace("explorerstrings", "");
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                         finalresults[1, allstuff] = results[i];
                         allstuff++;
                     }
@@ -646,7 +574,6 @@ namespace Silent_Scanner
                 string ln;
                 int counteer = 0;
                 List<string> possiblecheatslogfile = new List<string>();
-<<<<<<< HEAD
 
                 try
                 {
@@ -661,26 +588,6 @@ namespace Silent_Scanner
                           explorerstrings = file.ReadToEnd().Split('\r');
                           file.Close();
                       }*/
-=======
-              
-
-                try
-                {
-                    string[] explorerstrings;
-                    try
-                    {
-                        explorerstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings").Replace("\r", "").Split('\n');
-                        File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", string.Join("\r\n", explorerstrings));
-
-
-                    }
-                    catch
-                    {
-                        StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer");
-                        explorerstrings = file.ReadToEnd().Split('\r');
-                        file.Close();
-                    }
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                     Searcher.Searchboi("explorer", "");
 
                     //   if (File.Exists(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer"))
@@ -702,19 +609,11 @@ namespace Silent_Scanner
                             {
                                 string time = fixtime(DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString());
                                 AppendTextBoxtoo("£explorerstrings$" + time + " Possible Explorer string found: " + danked[helpme]);
-<<<<<<< HEAD
-=======
-                       
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                             }
                         }
                         ChangeLabeltoo(stringsearch[0, 1] + @"\" + stringsearch[0, 0]);
                         stringsearch[0, 1]++;
                         // counteer++;// HERE BOI
-<<<<<<< HEAD
-=======
-                     
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                     }
                     //   }
                 }
@@ -731,60 +630,25 @@ namespace Silent_Scanner
             counter.Start();
             while (!messagesent)
             {
-<<<<<<< HEAD
                 if (!explorersearched && Searcher.searchprogress != "")
                 {
-=======
-                if (javawsearched || explorersearched)
-                { 
-                    if (Searcher.searchprogress != "")
-                         { 
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                     switch (currentnumber)
                     {
-                       
                         case 0:
                             //      currentstat = currentstatarray[0];
                             ChangeLabeltoo(Searcher.searchprogress);
-                        currentnumbere++;
-                        break;
+                            currentnumbere++;
+                            break;
 
                         case 1:
                             //      currentstat = currentstatarray[0];
                             ChangeLabeltoo(Searcher.searchprogress + ".");
-                        currentnumbere++;
-                        break;
+                            currentnumbere++;
+                            break;
 
                         case 2:
                             //       currentstat = currentstatarray[0];
                             ChangeLabeltoo(Searcher.searchprogress + "..");
-                        currentnumbere++;
-                        break;
-
-                        case 3:
-                            ChangeLabeltoo(Searcher.searchprogress + "...");
-                        currentnumbere = 0;
-                        break;
-                    }
-                }
-                if (Searcher.searchprogressjavaw != "")
-                    switch (currentnumber)
-                    {
-                        case 0:
-                            //      currentstat = currentstatarray[0];
-                            ChangeLabel(Searcher.searchprogressjavaw);
-                            currentnumbere++;
-                            break;
-
-                        case 1:
-                            //      currentstat = currentstatarray[0];
-                            ChangeLabel(Searcher.searchprogressjavaw + ".");
-                            currentnumbere++;
-                            break;
-
-                        case 2:
-                            //       currentstat = currentstatarray[0];
-                            ChangeLabel(Searcher.searchprogressjavaw + "..");
                             currentnumbere++;
                             break;
 
@@ -1096,7 +960,6 @@ namespace Silent_Scanner
         /*        public static void explorerstringsearch(string[] strings)
                 {
                 }*/
-<<<<<<< HEAD
         private void worker_DoSearch(object sender, DoWorkEventArgs e)
         {
             string ln;
@@ -1113,28 +976,6 @@ namespace Silent_Scanner
                   javawstrings = file.ReadToEnd().Split('\r');
                   file.Close();
               }*/
-=======
-
-        private void worker_DoSearch(object sender, DoWorkEventArgs e)
-        {
-
-
-            string ln;
-            int counteer = 0;
-            string[] javawstrings;
-            try
-            {
-                javawstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/javawstrings").Replace("\r", "").Split('\n');
-                File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\javaw", string.Join("\r\n", javawstrings));
-
-            }
-            catch
-            {
-                StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\javaw");
-                javawstrings = file.ReadToEnd().Split('\r');
-                file.Close();
-            }
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
             try
             {
                 Searcher.Searchboi("javaw", "");
@@ -1158,10 +999,6 @@ namespace Silent_Scanner
                             stringsearch[0, 1]++;
                             counteer++;
                         }
-<<<<<<< HEAD
-=======
-                     
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                     }
                 }
             }
@@ -1172,7 +1009,6 @@ namespace Silent_Scanner
 
         private void worker_five(object sender, DoWorkEventArgs e)
         {
-<<<<<<< HEAD
             try
             {
                 string[] filePaths = Directory.GetFiles(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\", "*.json", SearchOption.TopDirectoryOnly);
@@ -1196,34 +1032,6 @@ namespace Silent_Scanner
                       javawstrings = file.ReadToEnd().Split('\r');
                       file.Close();
                   }*/
-=======
-
-            try
-            {
-                string[] filePaths = Directory.GetFiles(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\", "*.json", SearchOption.AllDirectories);
-                /*    for (int i = 0; filePaths.Length > i; i++)
-                    {
-                        try
-                        {
-                            string[] text = File.ReadAllLines(filePaths[i]);
-                            for (int ef = 0; text.Length > ef; ef++)
-                            {
-                                string texttolower = text[ef].ToLower();*/
-                string[] javawstrings;
-                try
-                {
-                    javawstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/javawstrings").Replace("\r", "").Split('\n');
-                    File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\javaw", string.Join("\r\n", javawstrings));
-
-
-                }
-                catch
-                {
-                    StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\javaw");
-                    javawstrings = file.ReadToEnd().Split('\r');
-                    file.Close();
-                }
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                 for (int i = 0; filePaths.Length > i; i++)
                 {
                     try
@@ -1240,7 +1048,6 @@ namespace Silent_Scanner
                                     AppendTextBoxtoo("£versionsjson$" + time + " Possible Cheat in versions " + filePaths[i] + "  " + texttolower); //versionsjson$
                                 }
                             }
-
                         }
                     }
                     catch { }
@@ -1269,10 +1076,6 @@ namespace Silent_Scanner
                     {
                         Parseresults();
 
-<<<<<<< HEAD
-=======
-                        MainAsync();
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                         currentstat = "Search finished! Check the results";
                         break;
                     }
@@ -1289,7 +1092,6 @@ namespace Silent_Scanner
         {
             try
             {
-<<<<<<< HEAD
                 string[] filePaths = Directory.GetFiles(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\versions", "*.json", SearchOption.TopDirectoryOnly);
 
                 /* try
@@ -1303,23 +1105,6 @@ namespace Silent_Scanner
                      explorerstrings = file.ReadToEnd().Split('\r');
                      file.Close();
                  }*/
-=======
-                string[] filePaths = Directory.GetFiles(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\versions", "*.json", SearchOption.AllDirectories);
-                string[] explorerstrings;
-                try
-                {
-                    explorerstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings").Replace("\r", "").Split('\n');
-                    File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", string.Join("\r\n", explorerstrings));
-
-
-                }
-                catch
-                {
-                    StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer");
-                    explorerstrings = file.ReadToEnd().Split('\r');
-                    file.Close();
-                }
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                 for (int i = 0; filePaths.Length > i; i++)
                 {
                     try
@@ -1336,7 +1121,6 @@ namespace Silent_Scanner
                                     AppendTextBoxtoo("£versionjson$" + time + " Possible Cheat in .minecraft " + filePaths[i] + "  " + texttolower);// versionjson
                                 }
                             }
-
                         }
                     }
                     catch { }
@@ -1351,7 +1135,6 @@ namespace Silent_Scanner
 
         private void worker_too(object sender, DoWorkEventArgs e)
         {
-<<<<<<< HEAD
             string[] filePaths = Directory.GetFiles(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\", "*.log", SearchOption.TopDirectoryOnly);
 
             /*   try
@@ -1365,23 +1148,6 @@ namespace Silent_Scanner
                    explorerstrings = file.ReadToEnd().Split('\r');
                    file.Close();
                }*/
-=======
-            string[] filePaths = Directory.GetFiles(@"C:\Users\" + Environment.UserName + @"\AppData\Roaming\.minecraft\", "*.log", SearchOption.AllDirectories);
-            string[] explorerstrings;
-            try
-            {
-                explorerstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings").Replace("\r", "").Split('\n');
-                File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", string.Join("\r\n", explorerstrings));
-
-
-            }
-            catch
-            {
-                StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer");
-                explorerstrings = file.ReadToEnd().Split('\r');
-                file.Close();
-            }
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
             for (int i = 0; filePaths.Length > i; i++)
             {
                 string[] text = File.ReadAllLines(filePaths[i]);
@@ -1396,10 +1162,6 @@ namespace Silent_Scanner
                             AppendTextBoxtoo("£minecraft*.log$" + time + " Possible Cheat in .minecraft " + filePaths[i] + "  " + texttolower);// minecraft*.log
                         }
                     }
-<<<<<<< HEAD
-=======
-
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                 }
             }
 
@@ -1407,22 +1169,6 @@ namespace Silent_Scanner
 
             AddProgress("10");
         }
-<<<<<<< HEAD
-=======
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Form2 Formpages = new Form2();
-            //    Hide();
-            Formpages.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-    
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
     }
 
     /// <summary>
@@ -1481,7 +1227,6 @@ namespace Silent_Scanner
             set { _results = value; }
         }
 
-<<<<<<< HEAD
         public static void CallSearchError(string message, string processname)
         {
             try
@@ -1531,24 +1276,15 @@ namespace Silent_Scanner
              catch { }*/
         }
 
-=======
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
         public static void CallSearchProgressChanged(string progress, int i)
         {
             try
             {
                 //    searchprogress = progress;
-<<<<<<< HEAD
                 switch (i)
                 {
                     case 0:
                         searchprogress = progress;
-=======
-                switch(i)
-                {
-                    case 0:
-                            searchprogress = progress;
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                         break;
 
                     case 1:
@@ -1556,17 +1292,10 @@ namespace Silent_Scanner
                         break;
 
                     default:
-<<<<<<< HEAD
                         searchprogress = progress;
                         break;
                 }
                 // searchprogress = progress;
-=======
-                         searchprogress = progress;
-                        break;
-                }
-               // searchprogress = progress;
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
 
                 //    Form1.ChangeLabel(progress);
             }
@@ -1599,25 +1328,6 @@ namespace Silent_Scanner
 
         public void Searchingexplorerstrings(string processname, string searchtext)
         {
-<<<<<<< HEAD
-=======
-            string[] explorerstrings;
-
-            try
-            {
-                explorerstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings").Replace("\r", "").Split('\n');
-                File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer", string.Join("\r\n", explorerstrings));
-
-
-            }
-            catch
-            {
-                StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\explorer");
-                explorerstrings = file.ReadToEnd().Split('\r');
-                file.Close();
-            }
-
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
             //Results.Clear();
 
             byte[] text = Encoding.Default.GetBytes(searchtext);//(byte[])Params["text"];
@@ -1729,21 +1439,13 @@ namespace Silent_Scanner
                             //String.Format("0x{0:x}", i - length), length.ToString(),
                             //       curstr.ToString() });
                             explorercurrentstringsearch = curstr.ToString().ToLower();
-<<<<<<< HEAD
                             for (int currentstringexplorer = 0; currentstringexplorer < Form1.explorerstrings.Length; currentstringexplorer++)
                             {
                                 if (explorercurrentstringsearch.Contains(Form1.explorerstrings[currentstringexplorer].Replace("\r\n", "")))
-=======
-                            for (int currentstringexplorer = 0; currentstringexplorer < explorerstrings.Length; currentstringexplorer++)
-                            {
-                                if (explorercurrentstringsearch.Contains(explorerstrings[currentstringexplorer].Replace("\r\n", "")))
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
                                 {
                                     Form1.searchstringsexplorer.Add(curstr.ToString());
                                 }
                             }
-         
-                            
 
                             count++;
                         }
@@ -1771,7 +1473,6 @@ namespace Silent_Scanner
 
             CallSearchFinished(processname);
         }
-<<<<<<< HEAD
         public void Searchingjavawstrings(string processname, string searchtext)
         {
             /*     string[] javawstrings;
@@ -1810,55 +1511,6 @@ namespace Silent_Scanner
             {
                 CallSearchError("Could not open " + processname, processname);
                 return;
-=======
-
-        public static void CallSearchError(string message, string processname)
-        {
-                
-            try
-            {
-                //   if (SearchFinished != null)
-                //      searchfinished = true;
-
-                if (processname == "explorer")
-                {
-                    searchprogress = message;
-                    Form1.explorersearched = true;
-                }
-                else if(processname == "javaw")
-                {
-                    Form1.javawsearched = true;
-                    searchprogressjavaw = message;
-                }
-            }
-            catch { }
-            searchprogress = message;
-            //    SearchError(message);
-        }
-
-        public static void CallSearchFinished(string processname)
-        {
-            try
-            {
-                //   if (SearchFinished != null)
-                try
-                {
-                    //   if (SearchFinished != null)
-                    //      searchfinished = true;
-                    //   SearchFinished();
-                    if (processname == "explorer")
-                    {
-                        Form1.explorersearched = true;
-                    }
-                    else if (processname == "javaw")
-                    {
-                        Form1.javawsearched = true;
-                    }
-                }
-                catch { }
-                searchfinished = true;
-                //   SearchFinished();
->>>>>>> dcc406a4d0103099007d847496b1a46575b3cd8b
             }
 
             phandle.EnumMemory((info) =>
@@ -1992,175 +1644,6 @@ namespace Silent_Scanner
         private bool IsChar(byte b)
         {
             return (b >= 32 && b <= 126) || b == 10 || b == 13 || b == 9;
-        }
-
-        public void Searchingjavawstrings(string processname, string searchtext)
-        {
-            string[] javawstrings;
-            try
-            {
-                javawstrings = new WebClient().DownloadString("https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/javawstrings").Replace("\r", "").Split('\n');
-                File.WriteAllText(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\javaw", string.Join("\r\n", javawstrings));
-
-            }
-            catch
-            {
-                StreamReader file = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\javaw");
-                javawstrings = file.ReadToEnd().Split('\r');
-                file.Close();
-            }
-            //  StreamWriter file = new StreamWriter(@"C:\Users\" + Environment.UserName + @"\AppData\Local\Temp\Silent_scanner\" + processname);
-            //Results.Clear();
-            //file.WriteLine();
-            byte[] text = Encoding.Default.GetBytes(searchtext);//(byte[])Params["text"];
-            ProcessHandle phandle;
-            int count = 0;
-            int totalstrings = 0;
-            string javawcurrentstringsearch = "";
-            int minsize = 4;//4;//
-            bool unicode = true;// true;//
-            bool opt_priv = true; //true;//
-            bool opt_img = false;//true;//
-            bool opt_map = true;//true;//
-
-            try
-            {
-                phandle = new ProcessHandle(Process.GetProcessesByName(processname)[0].Id,
-                    ProcessAccess.QueryInformation |
-                    MinProcessReadMemoryRights);
-            }
-            catch
-            {
-                CallSearchError("Could not open " + processname, processname);
-                return;
-            }
-
-            phandle.EnumMemory((info) =>
-            {
-                // skip unreadable areas
-                if (info.Protect == MemoryProtection.AccessDenied)
-                    return true;
-                if (info.State != MemoryState.Commit)
-                    return true;
-
-                if ((!opt_priv) && (info.Type == MemoryType.Private))
-                    return true;
-
-                if ((!opt_img) && (info.Type == MemoryType.Image))
-                    return true;
-
-                if ((!opt_map) && (info.Type == MemoryType.Mapped))
-                    return true;
-
-                byte[] data = new byte[info.RegionSize.ToInt32()];
-                int bytesRead = 0;
-                totalstrings += info.RegionSize.ToInt32();
-                CallSearchProgressChanged(
-                       //Form1 form = new Form1();
-                       String.Format("Searching 0x{0} ({1} / " + info.RegionSize.ToInt32() + ")", info.BaseAddress.ToString("x"), count), 1);
-
-                try
-                {
-                    bytesRead = phandle.ReadMemory(info.BaseAddress, data, data.Length);
-
-                    if (bytesRead == 0)
-                        return true;
-                }
-                catch
-                {
-                    return true;
-                }
-
-                StringBuilder curstr = new StringBuilder();
-                bool isUnicode = false;
-                byte byte2 = 0;
-                byte byte1 = 0;
-                //    if ((processname == "explorer" && count < 500000) || (processname == "javaw" && count < 200000))//500000 352 13~ minutes // 100000 13 minutes, 380
-                //   {
-                for (int i = 0; i < bytesRead; i++)
-                {
-                    bool isChar = IsChar(data[i]);
-
-                    if (unicode && isChar && isUnicode && byte1 > 0)
-                    {
-                        isUnicode = false;
-
-                        if (curstr.Length > 0)
-                            curstr.Remove(curstr.Length - 1, 1);
-
-                        curstr.Append((char)data[i]);
-                    }
-                    else if (isChar)
-                    {
-                        curstr.Append((char)data[i]);
-                    }
-                    else if (unicode && data[i] == 0 && IsChar(byte1) && !IsChar(byte2))
-                    {
-                        // skip null byte
-                        isUnicode = true;
-                    }
-                    else if (unicode &&
-                        data[i] == 0 && IsChar(byte1) && IsChar(byte2) && curstr.Length < minsize)
-                    {
-                        // ... [char] [char] *[null]* ([char] [null] [char] [null]) ...
-                        //                   ^ we are here
-                        isUnicode = true;
-                        curstr = new StringBuilder();
-                        curstr.Append((char)byte1);
-                    }
-                    else
-                    {
-                        if (curstr.Length >= minsize)
-                        {
-                            int length = curstr.Length;
-
-                            if (isUnicode)
-                                length *= 2;
-
-                            //      Results.Add(new string[] { Utils.FormatAddress(info.BaseAddress),
-                            //String.Format("0x{0:x}", i - length), length.ToString(),
-                            //       curstr.ToString() });
-                            //    javawcurrentstringsearch = curstr.ToString().ToLower();
-
-                            javawcurrentstringsearch = curstr.ToString().ToLower();
-                            for (int currentstringjavaw = 0; currentstringjavaw < javawstrings.Length; currentstringjavaw++)
-                            {
-                                if (javawcurrentstringsearch.Contains(javawstrings[currentstringjavaw].Replace("\r\n", "")))
-                                {
-                                    Form1.searchstringsjavaw.Add(curstr.ToString());
-                                }
-                            }
-                           
-                            {
-                                //file.WriteLine(curstr.ToString());
-                                Form1.searchstringsjavaw.Add(curstr.ToString().ToLower());
-                            }
-
-                            count++;
-                        }
-
-                        isUnicode = false;
-                        curstr = new StringBuilder();
-                    }
-
-                    byte2 = byte1;
-                    byte1 = data[i];
-                }
-                // }
-
-                data = null;
-
-                return true;
-            });
-            /*  for (int aaa = 0; aaa < filecontent.Count(); aaa++)
-              {
-                  file.WriteLine(filecontent[aaa]);
-              }
-              filecontent.Clear();*/
-            //file.Close();
-            phandle.Dispose();
-
-            CallSearchFinished(processname);
         }
     }
 }
