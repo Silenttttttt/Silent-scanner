@@ -15,30 +15,6 @@ namespace Silent_Scanner
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Silenttttttt/Silent-scanner");
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Close();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                WindowState = FormWindowState.Minimized;
-            }
-            catch { }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void FormMain_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -58,6 +34,30 @@ namespace Silent_Scanner
         private void FormMain_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Silenttttttt/Silent-scanner");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            catch { }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Close();
         }
     }
 }
