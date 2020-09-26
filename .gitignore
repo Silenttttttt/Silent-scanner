@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Silent Scanner/Resources/DriveView.cfg
+Silent Scanner/Resources/Everything.ini
