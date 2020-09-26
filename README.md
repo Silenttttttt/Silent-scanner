@@ -5,16 +5,16 @@ You do not need to setup discord to see the results.
 
 Launcher:
 
-https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/Silent%20scanner%20launcher.exe
+https://silentscanner.000webhostapp.com/Silent_scanner/Silent%20scanner%20launcher.exe
 
 Strings:
 
 Explorer strings
 
-https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/explorerstrings
+https://silentscanner.000webhostapp.com/Silent_scanner/explorerstrings
 
 Javaw strings
 
-https://settled-jurisdictio.000webhostapp.com/v289754p7n2898f234nm8077048gh9h9oythjwohwerhogrowhtwop/240c24t783v2098d21794d210987498132y4d8923yd872310821/javawstrings
+https://silentscanner.000webhostapp.com/Silent_scanner/javawstrings
 
 My discord is Silent#0902
