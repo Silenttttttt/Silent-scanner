@@ -76,7 +76,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(-1, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(517, 24);
+            this.label1.Size = new System.Drawing.Size(517, 417);
             this.label1.TabIndex = 30;
             this.label1.Text = "Silent scanner ";
             this.label1.Click += new System.EventHandler(this.label1_Click);

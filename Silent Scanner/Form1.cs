@@ -48,7 +48,7 @@ namespace Silent_Scanner
 
 
 
-        public static string version = "1.4.0";
+        public static string version = "1.4.5";
 
 
 
@@ -960,6 +960,28 @@ namespace Silent_Scanner
             while (!messagesent)
             {
                 Thread.Sleep(500);
+
+
+
+
+
+
+
+
+                if(timing.Minutes.ToString() == "3")
+                {
+                    ChangeLabeltwo("Scan reached 3 minutes, Check if scanner is stuck. End scan if you think so.");
+                }
+                if (timing.Minutes.ToString() == "5")
+                {
+                    ChangeLabeltwo("Scan reached 5 minutes, ending scan is recommended.");
+                }
+
+
+
+
+
+
                 if (!explorersearched && Searcher.searchprogress != "" && !explorerfinishedstringsearch && !explorerfinishedstringsearch)
                 {
                     switch (currentnumbere)
@@ -1044,27 +1066,30 @@ namespace Silent_Scanner
                     putdankresults("");
 
 
-                    switch (currentnumbere)
+                    if (timing.Minutes.ToString() != "3" && timing.Minutes.ToString() != "5")
                     {
-                        case 0:
+                        switch (currentnumbere)
+                        {
+                            case 0:
 
-                            ChangeLabeltwo(currentstat);
-                            break;
+                                ChangeLabeltwo(currentstat);
+                                break;
 
-                        case 1:
+                            case 1:
 
-                            ChangeLabeltwo(currentstat + ".");
-                            break;
+                                ChangeLabeltwo(currentstat + ".");
+                                break;
 
-                        case 2:
-                            //       currentstat = currentstatarray[0];
-                            ChangeLabeltwo(currentstat + "..");
-                            break;
+                            case 2:
+                                //       currentstat = currentstatarray[0];
+                                ChangeLabeltwo(currentstat + "..");
+                                break;
 
-                        case 3:
-                            //  currentstat = currentstatarray[0];
-                            ChangeLabeltwo(currentstat + "...");
-                            break;
+                            case 3:
+                                //  currentstat = currentstatarray[0];
+                                ChangeLabeltwo(currentstat + "...");
+                                break;
+                        }
                     }
                 }
 
@@ -2039,6 +2064,13 @@ namespace Silent_Scanner
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            //    Hide();
+            form3.Show();
         }
     }
 
