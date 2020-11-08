@@ -28,4 +28,4 @@ Javaw strings
 https://silentscanner.000webhostapp.com/Silent_scanner/javawstrings
 
 
-My discord is Silent#6969
+My discord is Silent#9022
